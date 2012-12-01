@@ -57,7 +57,7 @@ namespace Foo.Tests
         }
 
         [Test]
-        public virtual void When_Start_that_is_wrong_from_the_beginning()
+        public virtual void When_Star_drawn_from_middle_and_clockwise()
         {
             var g = GeographyFactory.CreatePolygon(CoordinatesTestFactory.StartThatDoesNotRenderWithoutFix());
 

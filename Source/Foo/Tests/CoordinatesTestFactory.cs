@@ -4,9 +4,9 @@ namespace Foo.Tests
 {
     public static class CoordinatesTestFactory
     {
-        public static ISet<Coordinates> WrongSouthToNorthAndManyWestAndBackClosed()
+        public static Coordinates[] WrongSouthToNorthAndManyWestAndBackClosed()
         {
-            var coordinates = new HashSet<Coordinates>();
+            var coordinates = new List<Coordinates>();
             coordinates.Add(new Coordinates { Latitude = 58.068356082112246, Longitude = 11.82043981552126 });
             coordinates.Add(new Coordinates { Latitude = 58.06866818143402, Longitude = 11.819613695144673 });
             coordinates.Add(new Coordinates { Latitude = 58.068549016560375, Longitude = 11.818626642227192 });
@@ -15,51 +15,51 @@ namespace Foo.Tests
             coordinates.Add(new Coordinates { Latitude = 58.06739706894528, Longitude = 11.81919527053835 });
             coordinates.Add(new Coordinates { Latitude = 58.06806667848543, Longitude = 11.81920599937441 });
             coordinates.Add(new Coordinates { Latitude = 58.068356082112246, Longitude = 11.82043981552126 });
-            return coordinates;
+            return coordinates.ToArray();
         }
 
-        public static ISet<Coordinates> WrongOrderAndClosed()
+        public static Coordinates[] WrongOrderAndClosed()
         {
-            var coordinates = new HashSet<Coordinates>();
+            var coordinates = new List<Coordinates>();
             coordinates.Add(new Coordinates { Latitude = 58.04836803946142, Longitude = 11.85287430196809 });
             coordinates.Add(new Coordinates { Latitude = 58.04804298770918, Longitude = 11.852927946148387 });
             coordinates.Add(new Coordinates { Latitude = 58.04817073765879, Longitude = 11.852665089664928 });
             coordinates.Add(new Coordinates { Latitude = 58.04836803946142, Longitude = 11.85287430196809 });
-            return coordinates;
+            return coordinates.ToArray();
         }
 
-        public static ISet<Coordinates> WrongOrderNotClosed()
+        public static Coordinates[] WrongOrderNotClosed()
         {
-            var coordinates = new HashSet<Coordinates>();
+            var coordinates = new List<Coordinates>();
             coordinates.Add(new Coordinates { Latitude = 59.8297423369731, Longitude = 17.519133203852 });//4
             coordinates.Add(new Coordinates { Latitude = 59.8296936773323, Longitude = 17.5190071588812 });//3
             coordinates.Add(new Coordinates { Latitude = 59.8298203729009, Longitude = 17.5189979955459 });//2
             coordinates.Add(new Coordinates { Latitude = 59.8298223425544, Longitude = 17.5191345140461 });//1
-            return coordinates;
+            return coordinates.ToArray();
         }
 
-        public static ISet<Coordinates> CorrectOrderAndClosed()
+        public static Coordinates[] CorrectOrderAndClosed()
         {
-            var coordinates = new HashSet<Coordinates>();
+            var coordinates = new List<Coordinates>();
             coordinates.Add(new Coordinates { Latitude = 58.04852510452791, Longitude = 11.851250409710307 });
             coordinates.Add(new Coordinates { Latitude = 58.04842148618687, Longitude = 11.851124345886607 });
             coordinates.Add(new Coordinates { Latitude = 58.048364708886254, Longitude = 11.851494490730662 });
             coordinates.Add(new Coordinates { Latitude = 58.04852510452791, Longitude = 11.851250409710307 });
-            return coordinates;
+            return coordinates.ToArray();
         }
 
-        public static ISet<Coordinates> CorrectOrderNotClosed()
+        public static Coordinates[] CorrectOrderNotClosed()
         {
-            var coordinates = new HashSet<Coordinates>();
+            var coordinates = new List<Coordinates>();
             coordinates.Add(new Coordinates { Latitude = 58.04852510452791, Longitude = 11.851250409710307 });
             coordinates.Add(new Coordinates { Latitude = 58.04842148618687, Longitude = 11.851124345886607 });
             coordinates.Add(new Coordinates { Latitude = 58.048364708886254, Longitude = 11.851494490730662 });
-            return coordinates;
+            return coordinates.ToArray();
         }
 
-        public static ISet<Coordinates> CapeTown()
+        public static Coordinates[] CapeTown()
         {
-            var coordinates = new HashSet<Coordinates>();
+            var coordinates = new List<Coordinates>();
             coordinates.Add(new Coordinates { Longitude = 18.623324871063232, Latitude = -33.87930689800001 });
             coordinates.Add(new Coordinates { Longitude = 18.518954753875732, Latitude = -33.814295035787055 });
             coordinates.Add(new Coordinates { Longitude = 18.469516277313232, Latitude = -33.90666550953439 });
@@ -76,12 +76,12 @@ namespace Foo.Tests
             coordinates.Add(new Coordinates { Longitude = 18.700229167938232, Latitude = -33.91578309625544 });
             coordinates.Add(new Coordinates { Longitude = 18.679629802703857, Latitude = -33.880447015354235 });
             coordinates.Add(new Coordinates { Longitude = 18.623324871063232, Latitude = -33.87930689800001 });
-            return coordinates;
+            return coordinates.ToArray();
         }
 
-        public static ISet<Coordinates> Castle()
+        public static Coordinates[] Castle()
         {
-            var coordinates = new HashSet<Coordinates>();
+            var coordinates = new List<Coordinates>();
             coordinates.Add(new Coordinates { Longitude = 9.520484685897834, Latitude = 49.758400165268135 });
             coordinates.Add(new Coordinates { Longitude = 9.520565152168281, Latitude = 49.75866354094329 });
             coordinates.Add(new Coordinates { Longitude = 9.520715355873115, Latitude = 49.75882641728967 });
@@ -103,12 +103,12 @@ namespace Foo.Tests
             coordinates.Add(new Coordinates { Longitude = 9.519481539726264, Latitude = 49.75831006273507 });
             coordinates.Add(new Coordinates { Longitude = 9.519781947135932, Latitude = 49.75825114944985 });
             coordinates.Add(new Coordinates { Longitude = 9.520484685897834, Latitude = 49.758400165268135 });
-            return coordinates;
+            return coordinates.ToArray();
         }
 
-        public static ISet<Coordinates> StartThatDoesNotRenderWithoutFix()
+        public static Coordinates[] StartThatDoesNotRenderWithoutFix()
         {
-            var coordinates = new HashSet<Coordinates>();
+            var coordinates = new List<Coordinates>();
             coordinates.Add(new Coordinates { Longitude = 14.413786888122559, Latitude = 35.91277231730788 });
             coordinates.Add(new Coordinates { Longitude = 14.423571586608887, Latitude = 35.93334614363321 });
             coordinates.Add(new Coordinates { Longitude = 14.435416221618652, Latitude = 35.913467466361155 });
@@ -120,7 +120,7 @@ namespace Foo.Tests
             coordinates.Add(new Coordinates { Longitude = 14.408808708190918, Latitude = 35.9052643183337 });
             coordinates.Add(new Coordinates { Longitude = 14.394217491149902, Latitude = 35.912911347607185 });
             coordinates.Add(new Coordinates { Longitude = 14.413786888122559, Latitude = 35.91277231730788 });
-            return coordinates;
+            return coordinates.ToArray();
         }
     }
 }
